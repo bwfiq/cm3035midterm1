@@ -128,3 +128,5 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     ],
 }
+
+CSRF_TRUSTED_ORIGINS = ['https://*.bwfiq.com','https://*.127.0.0.1']
