@@ -64,7 +64,7 @@ python manage.py test
 
 ## Data Loading Script
 
-The data loading script is a Django management command named `load_data`. To execute this command and load data from a CSV file into the database:
+The data loading script is a Django management command named `import_movies`. To execute this command and load data from a CSV file into the database:
 
 ```bash
 python manage.py import_movies .\movie_dataset.csv
