@@ -1,0 +1,17 @@
+<!-- movieDB/templates/movieDB/movie_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie List</title>
+</head>
+<body>
+    <h2>Movie List</h2>
+    <ul>
+        {% for movie in movies %}
+        <li>
+            <a href="{% url 'update-movie' pk=movie.id %}">{{ movie.id }} - {{ movie.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

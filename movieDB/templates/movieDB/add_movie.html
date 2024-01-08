@@ -1,0 +1,15 @@
+<!-- movieDB/templates/movieDB/add_movie.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Movie</title>
+</head>
+<body>
+    <h2>Add Movie</h2>
+    <form method="post" action="{% url 'add-movie' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Add Movie">
+    </form>
+</body>
+</html>

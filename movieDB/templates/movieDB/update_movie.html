@@ -1,0 +1,24 @@
+<!-- movieDB/templates/movieDB/update_movie.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Movie</title>
+</head>
+<body>
+    <h2>Update Movie</h2>
+    <form method="post" action="{% url 'update-movie' pk=movie.id %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update Movie">
+    </form>
+    {% if errors %}
+        <div class="errors">
+            <ul>
+                {% for field, error_list in errors.items %}
+                    <li>{{ field }}: {{ error_list.0 }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+</body>
+</html>
