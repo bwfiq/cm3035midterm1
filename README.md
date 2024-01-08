@@ -2,6 +2,19 @@
 
 # Django Movie Database
 
+## Quickstart
+Run docker-compose up -d on a file as follows:
+```yaml
+version: '3'
+
+services:
+  cm3035midterm1:
+    image: bwfiq/cm3035midterm1:latest
+    container_name: cm3035midterm1
+    ports:
+      - "8000:8000"
+```
+
 ## Packages and Versions
 
 - Django: 5.0.1
